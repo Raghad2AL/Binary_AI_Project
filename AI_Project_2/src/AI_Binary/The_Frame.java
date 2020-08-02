@@ -1,5 +1,6 @@
 package AI_Binary;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import cartesian.coordinate.CCPoint;
@@ -15,6 +16,7 @@ public class The_Frame extends javax.swing.JFrame {
 	 public static String str;
 	 public static String[] arrStr;
      public static Main Frame = new Main();
+     public static ArrayList<CCPoint> List = new ArrayList<CCPoint>();
 
 
     /**
@@ -151,10 +153,11 @@ public class The_Frame extends javax.swing.JFrame {
     	x=Double.parseDouble(arrStr[0]);
     	y=Double.parseDouble(arrStr[1]);
     	z=Integer.parseInt(arrStr[2]);
-    	 s.add(new CCPoint(x, y,z));
+    	CCPoint point = new CCPoint(x, y,z);
+    	 s.add(point);
          Frame.add(s);
     	 Frame.validate();
-    	 
+    	 List.add(point);    	 
     	
 
     }//GEN-LAST:event_PointsTextActionPerformed
