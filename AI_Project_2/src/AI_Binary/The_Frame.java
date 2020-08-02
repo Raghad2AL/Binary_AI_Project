@@ -170,10 +170,7 @@ public class The_Frame extends javax.swing.JFrame {
             public void run() {
                 The_Frame frame = new The_Frame();
                 frame.setVisible(true);
-
-                 
-                  
-                  
+    
             }
         });
     }//main
