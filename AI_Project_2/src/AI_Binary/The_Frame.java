@@ -7,8 +7,8 @@ import cartesian.coordinate.CCSystem;
 
 public class The_Frame extends javax.swing.JFrame {
 
-   public static int x;
-   public static int y;
+   public static double x;
+   public static double y;
    public static int z;
 	//Scanner myInput = new Scanner( System.in );
 	 public static CCSystem s = new CCSystem();
@@ -83,30 +83,34 @@ public class The_Frame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(58, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(LearningRateLabel)
+                        .addGap(10, 10, 10)
+                        .addComponent(LearningRateLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(LabelforIterations)
+                        .addGap(4, 4, 4)
+                        .addComponent(TextForIterations, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(PointsText, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(LearnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(98, 98, 98))
             .addGroup(layout.createSequentialGroup()
-                .addGap(702, 702, 702)
-                .addComponent(LearningRateLabel)
-                .addGap(10, 10, 10)
-                .addComponent(LearningRateLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(702, 702, 702)
-                .addComponent(LearningRateSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(680, 680, 680)
-                .addComponent(LabelforIterations)
-                .addGap(4, 4, 4)
-                .addComponent(TextForIterations, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(697, 697, 697)
-                .addComponent(PointsText, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(700, 700, 700)
-                .addComponent(LearnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addComponent(LearningRateSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(11, 11, 11)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LearningRateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LearningRateLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -122,7 +126,7 @@ public class The_Frame extends javax.swing.JFrame {
                 .addComponent(PointsText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(LearnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
@@ -144,8 +148,8 @@ public class The_Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
     	str=PointsText.getText();
     	arrStr=str.split(","); 
-    	x=Integer.parseInt(arrStr[0]);
-    	y=Integer.parseInt(arrStr[1]);
+    	x=Double.parseDouble(arrStr[0]);
+    	y=Double.parseDouble(arrStr[1]);
     	z=Integer.parseInt(arrStr[2]);
     	 s.add(new CCPoint(x, y,z));
          Frame.add(s);
