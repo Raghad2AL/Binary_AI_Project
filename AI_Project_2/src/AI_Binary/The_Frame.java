@@ -180,12 +180,6 @@ public static double x;
     		WList.add(W);
     		W=0;
     	}
-    	
-    	for(int i=0; i<WList.size();i++)
-    	{
-    		//System.out.print("Hello");
-    		System.out.println(WList.get(i).doubleValue()); 
-    	}
     }//this method to initialize weights with random values between -0.5 and 0.5
    
     public static void main(String args[]) {
