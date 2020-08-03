@@ -77,4 +77,17 @@ public class CCPoint {
     public CCPoint(double x, double y,int value) {
         this(x, y, Color.black, new BasicStroke(1f), value);
     }
+    
+    public double GetX() 
+    {
+    	return this.x;
+    }
+    public double GetY() 
+    {
+    	return this.y;
+    }
+    public int GetV() 
+    {
+    	return this.value;
+    }
 }

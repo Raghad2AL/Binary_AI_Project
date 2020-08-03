@@ -8,7 +8,11 @@ import cartesian.coordinate.CCSystem;
 
 public class The_Frame extends javax.swing.JFrame {
 
-   public static double x;
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+public static double x;
    public static double y;
    public static int z;
 	//Scanner myInput = new Scanner( System.in );
@@ -157,7 +161,8 @@ public class The_Frame extends javax.swing.JFrame {
     	 s.add(point);
          Frame.add(s);
     	 Frame.validate();
-    	 List.add(point);    	 
+    	 List.add(point);  
+
     	
 
     }//GEN-LAST:event_PointsTextActionPerformed
@@ -173,7 +178,7 @@ public class The_Frame extends javax.swing.JFrame {
             public void run() {
                 The_Frame frame = new The_Frame();
                 frame.setVisible(true);
-    
+                
             }
         });
     }//main
