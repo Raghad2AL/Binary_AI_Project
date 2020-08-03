@@ -194,7 +194,17 @@ public static double x;
     	}
     }//this method to initialize weights with random values between -0.5 and 0.5
    
-    
+
+    public int Step_function(float x) {
+        if (x >= 0) 
+        {
+            return 1;
+        } 
+        else 
+        {
+            return 0;
+        }
+    }//Step func
     public static void main(String args[]) {
        
         /* Create and display the form */
