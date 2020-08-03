@@ -1,5 +1,7 @@
 package AI_Binary;
 
+import java.awt.BasicStroke;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -16,6 +18,7 @@ public class The_Frame extends javax.swing.JFrame {
 public static double x;
    public static double y;
    public static int z;
+	public static CCPoint point;
 	//Scanner myInput = new Scanner( System.in );
 	 public static CCSystem s = new CCSystem();
 	 public static String str;
@@ -23,6 +26,7 @@ public static double x;
      public static Main Frame = new Main();
      public static ArrayList<CCPoint> List = new ArrayList<CCPoint>();
      public static ArrayList<Double> WList =new ArrayList<Double>();
+     public static ArrayList<Integer> OList =new ArrayList<Integer>();//Actual output
      boolean flag = true;
 
     public The_Frame() {
@@ -154,12 +158,20 @@ public static double x;
 
     private void PointsTextActionPerformed(java.awt.event.ActionEvent evt)
     {
+    
     	str=PointsText.getText();
     	arrStr=str.split(","); 
     	x=Double.parseDouble(arrStr[0]);
     	y=Double.parseDouble(arrStr[1]);
     	z=Integer.parseInt(arrStr[2]);
-    	CCPoint point = new CCPoint(x, y,z);
+    	if(z==0) {
+           point = new CCPoint(x, y,Color.red, new BasicStroke(1f),z);
+    	}
+    	else 
+    	{
+          point = new CCPoint(x, y,Color.BLUE, new BasicStroke(1f),z);
+
+    	}
     	 s.add(point);
     	 List.add(point);  
          Frame.add(s);
@@ -182,6 +194,7 @@ public static double x;
     	}
     }//this method to initialize weights with random values between -0.5 and 0.5
    
+    
     public static void main(String args[]) {
        
         /* Create and display the form */
