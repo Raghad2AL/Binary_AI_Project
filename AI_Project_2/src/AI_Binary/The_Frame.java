@@ -76,7 +76,7 @@ public static double x;
             }
         });
 
-        LabelforIterations.setText("Number of Iterations:");
+        LabelforIterations.setText("Number of Epoch:");
 
         LearnButton.setText("Learn");
         LearnButton.addActionListener(new java.awt.event.ActionListener() {
